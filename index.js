@@ -600,6 +600,14 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
                 }
             }
             break
+case 'bot':
+hem = fs.readFileSync('./vn bot/Bot.mp3');
+chika.sendMessage(from, hem, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
+case 'p':
+hem = fs.readFileSync('./vn bot/P.mp3');
+chika.sendMessage(from, hem, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+break
 	    case 'family100': {
 		 if (!isPremium && global.db.data.users[m.sender].limit < 1) return reply(mess.endLimit) // respon ketika limit habis
 		db.data.users[m.sender].limit -= 1 // -1 limit
